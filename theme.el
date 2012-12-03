@@ -1,26 +1,18 @@
-(defun os-x-theme ()
-  (menu-bar-mode 1)
+;; Remove scrollbars and make hippie expand
+;; work nicely with yasnippet
 
-  ;; window
-  (setq default-frame-alist
-        '((left . 22) (top . 44)
-          (width . 80) (height . 50)))
+(set-face-attribute 'default nil
+                :family "Inconsolata" :height 130 :weight 'normal)
 
-  ;; font
-  (setq mac-allow-anti-aliasing t)
-  (set-face-font
-   'default
-   "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-12-*-*-*-m-0-iso10646-"))
 
-(when window-system
-  (os-x-theme))
+;; highlight the current line; set a custom face, so we can
+;; recognize from the normal marking (selection)
+(defface hl-line '((t (:background "#555")))
+  "Face to use for `hl-line-face'." :group 'hl-line)
+(setq hl-line-face 'hl-line)
+(global-hl-line-mode t) ; turn it on for all modes by default
 
-(when (getenv "BACKGROUND")
-  (setq frame-background-mode (intern (getenv "BACKGROUND"))))
-
-(when (and (functionp 'color-theme-install) (>= (display-color-cells) 256))
-  (if (string-equal (getenv "BACKGROUND") "dark")
-      (color-theme-solarized-dark)
-    (color-theme-solarized-light)))
 
 (provide 'theme)
+
+

@@ -2,3 +2,6 @@
 elpa
 places
 recentf
+.emacs.desktop.lock
+.emacs.desktop
+multi-project/mp

@@ -7,8 +7,6 @@
 ;; disable auto-save-list/.saves
 (setq auto-save-list-file-prefix nil)
 
-;; disable bell
-(setq visible-bell nil)
 
 ;; always open in the same window
 (setq ns-pop-up-frames nil)

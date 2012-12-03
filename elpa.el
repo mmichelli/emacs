@@ -7,15 +7,12 @@
                   'color-theme-twilight
                   'erlang
                   'full-ack
-                  'go-mode
                   'haskell-mode
                   'inf-ruby
                   'magit
                   'mustache-mode
-                  'peepopen
                   'rhtml
                   'ruby-mode
-                  'sr-speedbar
                   'starter-kit
                   'starter-kit-lisp
                   'starter-kit-ruby
